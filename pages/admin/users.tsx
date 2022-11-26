@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import useSWR from "swr";
 import { Grid, MenuItem, Select } from "@mui/material";
 import { DataGrid, GridColDef, GridRenderCellParams } from "@mui/x-data-grid";
-import { PeopleOutline } from "@mui/icons-material";
+import PeopleOutline from "@mui/icons-material/PeopleOutline";
 import { AdminLayout } from "../../components/layouts";
 import { IUser } from "../../interfaces";
 import { tesloApi } from "../../api";

@@ -13,20 +13,17 @@ import {
   ListItemText,
   ListSubheader,
 } from "@mui/material";
-import {
-  AccountCircleOutlined,
-  AdminPanelSettings,
-  CategoryOutlined,
-  ConfirmationNumberOutlined,
-  DashboardOutlined,
-  EscalatorWarningOutlined,
-  FemaleOutlined,
-  LoginOutlined,
-  MaleOutlined,
-  SearchOutlined,
-  VpnKeyOutlined,
-} from "@mui/icons-material";
-
+import AccountCircleOutlined from "@mui/icons-material/AccountCircleOutlined";
+import AdminPanelSettings from "@mui/icons-material/AdminPanelSettings";
+import CategoryOutlined from "@mui/icons-material/CategoryOutlined";
+import ConfirmationNumberOutlined from "@mui/icons-material/ConfirmationNumber";
+import DashboardOutlined from "@mui/icons-material/DashboardOutlined";
+import EscalatorWarningOutlined from "@mui/icons-material/EscalatorWarningOutlined";
+import FemaleOutlined from "@mui/icons-material/FemaleOutlined";
+import LoginOutlined from "@mui/icons-material/LoginOutlined";
+import MaleOutlined from "@mui/icons-material/MaleOutlined";
+import SearchOutlined from "@mui/icons-material/SearchOutlined";
+import VpnKeyOutlined from "@mui/icons-material/VpnKeyOutlined";
 import { AuthContext, UiContext } from "../../context";
 
 export const SideBarMenu = () => {
@@ -161,13 +158,13 @@ export const SideBarMenu = () => {
                 </ListItemIcon>
                 <ListItemText primary={"Dashboard"} />
               </ListItem>
-              <ListItem button>
+              <ListItem button onClick={() => navigateTo("/admin/products")}>
                 <ListItemIcon>
                   <CategoryOutlined />
                 </ListItemIcon>
                 <ListItemText primary={"Productos"} />
               </ListItem>
-              <ListItem button>
+              <ListItem button onClick={() => navigateTo("/admin/orders")}>
                 <ListItemIcon>
                   <ConfirmationNumberOutlined />
                 </ListItemIcon>

@@ -15,13 +15,12 @@ export const authOptions: NextAuthOptions = {
     Credentials({
       name: 'Custom Login',
       credentials: {
-        email: {label: 'Email', type: 'email', placeholder: 'correo@prueba.com' },
-        password: { label: 'Password', type: 'password', placeholder: 'Password'},
+        email: { label: 'Email', type: 'email', placeholder: 'correo@prueba.com' },
+        password: { label: 'Password', type: 'password', placeholder: 'Password' },
       },
       async authorize(credentials): Promise<any> {
-        console.log({credentials});
         // return { name: 'dimaria', email: 'didi@prueba.com', role: 'admin' };
-        return await dbUsers.checkUserEmailPassword( credentials!.email, credentials!.password)
+        return await dbUsers.checkUserEmailPassword(credentials!.email, credentials!.password)
       }
     }),
   ],
@@ -47,17 +46,17 @@ export const authOptions: NextAuthOptions = {
 
     async jwt({ token, account, user }) {
 
-      if( account ) {
+      if (account) {
         token.accessToken = account.access_token;
 
-        switch( account.type ) {
-          
+        switch (account.type) {
+
           case 'oauth':
-            token.user = await dbUsers.oAuthToDbUser( user?.email || '', user?.name  || '' );
+            token.user = await dbUsers.oAuthToDbUser(user?.email || '', user?.name || '');
 
           case 'credentials':
             token.user = user;
-          break;
+            break;
         }
       }
 

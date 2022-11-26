@@ -1,16 +1,16 @@
 import { useState, useEffect } from "react";
 import useSWR from "swr";
-import {
-  AccessTimeOutlined,
-  AttachMoneyOutlined,
-  CancelPresentationOutlined,
-  CategoryOutlined,
-  CreditCardOffOutlined,
-  CreditCardOutlined,
-  DashboardOutlined,
-  GroupOutlined,
-  ProductionQuantityLimitsOutlined,
-} from "@mui/icons-material";
+
+import AccessTimeOutlined from "@mui/icons-material/AccessTimeOutlined";
+import AttachMoneyOutlined from "@mui/icons-material/AttachMoneyOutlined";
+import CancelPresentationOutlined from "@mui/icons-material/CancelPresentationOutlined";
+import CategoryOutlined from "@mui/icons-material/CategoryOutlined";
+import CreditCardOffOutlined from "@mui/icons-material/CreditCardOffOutlined";
+import CreditCardOutlined from "@mui/icons-material/CreditCardOutlined";
+import DashboardOutlined from "@mui/icons-material/DashboardOutlined";
+import GroupOutlined from "@mui/icons-material/GroupOutlined";
+import ProductionQuantityLimitsOutlined from "@mui/icons-material/ProductionQuantityLimitsOutlined";
+
 import { AdminLayout } from "../../components/layouts";
 import { Grid, Typography } from "@mui/material";
 import { SummaryTile } from "../../components/admin";

@@ -1,30 +1,27 @@
-import { ShopLayout } from "../../components/layouts"
-import { Typography } from '@mui/material';
+import { ShopLayout } from "../../components/layouts";
+import { Typography } from "@mui/material";
 import { useProducts } from "../../hooks";
 import { FullScreenLoading } from "../../components/ui";
 import { ProductList } from "../../components/products";
 
-
-const kidPage = () => {
-
-  const { products, isLoading } = useProducts('/products?gender=kid');
+const KidPage = () => {
+  const { products, isLoading } = useProducts("/products?gender=kid");
 
   return (
-    <ShopLayout title="Categoria - Kid" pageDescription="toda la ropa para kids" >
-      <Typography variant='h1' component='h1'>
+    <ShopLayout
+      title="Categoria - Kid"
+      pageDescription="toda la ropa para kids"
+    >
+      <Typography variant="h1" component="h1">
         Kids
       </Typography>
-      <Typography variant='h2' sx={{mb: 1}} >
+      <Typography variant="h2" sx={{ mb: 1 }}>
         Todos los productos
       </Typography>
 
-      {
-        isLoading
-          ? <FullScreenLoading />
-          : <ProductList products={ products } />
-      }
+      {isLoading ? <FullScreenLoading /> : <ProductList products={products} />}
     </ShopLayout>
-  )
-}
+  );
+};
 
-export default kidPage
+export default KidPage;
